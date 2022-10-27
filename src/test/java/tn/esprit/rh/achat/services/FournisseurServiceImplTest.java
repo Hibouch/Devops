@@ -4,6 +4,7 @@ import tn.esprit.rh.achat.entities.Fournisseur;
 import tn.esprit.rh.achat.repositories.FournisseurRepository;
 
 import org.junit.Test;
+///import org.junit.Test;
 //import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.extension.ExtendWith;
