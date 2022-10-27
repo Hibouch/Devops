@@ -69,7 +69,7 @@ public class FournisseurServiceImplTest {
 
 
 	        when(FournisseurService.retrieveAllFournisseurs()).thenReturn(Lf);
-	        //test
+	        //Test
 	        List<Fournisseur> fournisseurList = FournisseurService.retrieveAllFournisseurs();
 	        assertEquals(3, fournisseurList.size());
 	        log.info("retrieve all ==>"+ fournisseurList.toString());
