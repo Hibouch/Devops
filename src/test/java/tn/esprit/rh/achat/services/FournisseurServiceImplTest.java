@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 @RunWith(SpringRunner.class)
 @ExtendWith(MockitoExtension.class)
-//@SpringBootTest
+@SpringBootTest
 @Slf4j
 public class FournisseurServiceImplTest {
 	
