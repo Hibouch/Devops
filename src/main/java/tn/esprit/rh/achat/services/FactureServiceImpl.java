@@ -18,13 +18,13 @@ public class FactureServiceImpl implements IFactureService {
 
 	@Override
 	public List<Facture> retrieveAllFactures() {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
 	@Override
 	public List<Facture> getFacturesByFournisseur(Long idFournisseur) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
