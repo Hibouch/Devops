@@ -4,12 +4,11 @@ import tn.esprit.rh.achat.entities.Fournisseur;
 import tn.esprit.rh.achat.repositories.FournisseurRepository;
 
 import org.junit.Test;
-///import org.junit.Test;
-//import org.junit.Test;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runner.RunWith;
-//import org.junit.runner.RunWith;
+
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -37,9 +36,7 @@ public class FournisseurServiceImplTest {
 
 	   @InjectMocks
 	    FournisseurServiceImpl FournisseurService;
-	    //Fournisseur f=Fournisseur.builder().idFournisseur(1L).code("123").libelle("test1")
-	         //   .categorieFournisseur(null).detailFournisseur(null).factures(null)
-	          //  .secteurActivites(null).build();
+	   
 	    @Test
 	    public void retrieveFournisseurTest(){
 	        Fournisseur f = new Fournisseur(1L,"123","test",null,null,null,null);
