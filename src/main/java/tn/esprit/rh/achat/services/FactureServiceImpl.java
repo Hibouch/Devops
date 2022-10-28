@@ -16,6 +16,48 @@ import java.util.Set;
 @Transactional
 public class FactureServiceImpl implements IFactureService {
 
+	@Override
+	public List<Facture> retrieveAllFactures() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Facture> getFacturesByFournisseur(Long idFournisseur) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Facture addFacture(Facture f) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void cancelFacture(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Facture retrieveFacture(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void assignOperateurToFacture(Long idOperateur, Long idFacture) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public float pourcentageRecouvrement(Date startDate, Date endDate) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+/*
 	@Autowired
 	FactureRepository factureRepository;
 	@Autowired
@@ -47,6 +89,7 @@ public class FactureServiceImpl implements IFactureService {
 	 * calculer les montants remise et le montant total d'un détail facture
 	 * ainsi que les montants d'une facture
 	 */
+	/*
 	private Facture addDetailsFacture(Facture f, Set<DetailFacture> detailsFacture) {
 		float montantFacture = 0;
 		float montantRemise = 0;
@@ -112,5 +155,5 @@ public class FactureServiceImpl implements IFactureService {
 		return pourcentage;
 	}
 	
-
+*/
 }
