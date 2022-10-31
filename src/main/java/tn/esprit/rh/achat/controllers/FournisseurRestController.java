@@ -17,7 +17,7 @@ public class FournisseurRestController {
 	@Autowired
 	IFournisseurService fournisseurService;
 
-	// http://localhost:8089/SpringMVC/fournisseur/retrieve-all-fournisseurs
+	// http://192.168.43.120:8082/SpringMVC/fournisseur/retrieve-all-fournisseurs
 	@GetMapping("/retrieve-all-fournisseurs")
 	@ResponseBody
 	public List<Fournisseur> getFournisseurs() {
@@ -25,7 +25,7 @@ public class FournisseurRestController {
 
 	}
 
-	// http://localhost:8089/SpringMVC/fournisseur/retrieve-fournisseur/8
+	// http://192.168.43.120:8082/SpringMVC/fournisseur/retrieve-fournisseur/8
 	@GetMapping("/retrieve-fournisseur/{fournisseur-id}")
 	@ResponseBody
 	public Fournisseur retrieveFournisseur(@PathVariable("fournisseur-id") Long fournisseurId) {
