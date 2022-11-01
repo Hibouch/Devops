@@ -3,7 +3,7 @@ version: "3"
 
 services:
   mysqldb:
-    container_name: hibadevops
+    container_name: hibaDevops
     image: mysql:5.7
     restart: unless-stopped
     environment:
@@ -21,7 +21,7 @@ services:
     ports:
       - 8082:8082
     depends_on:
-      - hibadevops
+      - hibaDevops
     environment:
       SPRING_APPLICATION_JSON: '{
            "spring.datasource.url"  : "jdbc:mysql://hibaDevops:3306/achatdb?useSSL=false",
