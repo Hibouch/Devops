@@ -14,8 +14,8 @@ services:
  app:
     depends_on:
       - mysqldb
-    image: achat
-    container_name: achat
+    image: hibasbouidevops/achat
+    container_name: Projetachat
     restart: on-failure
     ports:
       - "8082:8082"
