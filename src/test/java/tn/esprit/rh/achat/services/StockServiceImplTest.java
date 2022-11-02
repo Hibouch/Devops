@@ -28,7 +28,6 @@ import tn.esprit.rh.achat.entities.Stock;
 import tn.esprit.rh.achat.repositories.StockRepository;
 @Slf4j
 @RunWith(SpringRunner.class)
-
 @ExtendWith(MockitoExtension.class)
 @SpringBootTest
 public class StockServiceImplTest {
@@ -37,13 +36,13 @@ public class StockServiceImplTest {
 	@Order(1)
   @Test
   
- void retrieveAllStocks() {
+ public void retrieveAllStocks() {
       List<Stock> listUsers = St.retrieveAllStocks();
       assertEquals(0, listUsers.size());
   }
 
   @Test
-  void addStock() {
+  public void addStock() {
       Stock s1 = new Stock();
       s1.setLibelleStock("stock test");
       s1.setQte(10);
@@ -53,12 +52,12 @@ public class StockServiceImplTest {
   }
 
   @Test
-  void deleteStock() {
+  public void deleteStock() {
       St.deleteStock(0L);
   }
 
   @Test
-  void updateStock() {
+ public  void updateStock() {
       Stock s1= St.retrieveStock(0L);
       s1.setQte(100);
       Stock updatedStock1= St.updateStock(s1);
@@ -66,12 +65,12 @@ public class StockServiceImplTest {
   }
 
   @Test
-  void retrieveStock() {
+  public void retrieveStock() {
       St.retrieveStock(11L);
   }
 
   @Test
-  void retrieveStatusStock() {
+  public void retrieveStatusStock() {
       St.retrieveStatusStock();
   }
 }
