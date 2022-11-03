@@ -2,29 +2,31 @@ version: "3.3"
 
 services:
   mysqldb:
-  
-    image: mysql
-    container_name: mysqlcicd
+    container_name: mysqldb
+    image: mysql:8
     restart: unless-stopped
     environment:
-       MYSQL_ROOT_PASSWORD: root
-       MYSQL_DATABASE: achatdb
+      - MYSQL_ALLOW_EMPTY_PASSWORD= yes
+      - MYSQL_DATABASE=achatdb
     ports:
       - "3306:3306"
-    
+    volumes:
+      - db:/var/lib/mysql
   app:
     depends_on:
       - mysqldb
-    image: hibadevops/achats:2.0.0
+    image: hibadevops/projetachat
     container_name: projetachat
     restart: on-failure
     ports:
-      - "8082:8082"
+      - "8089:8089"
     environment:
       SPRING_APPLICATION_JSON: '{
-        "spring.datasource.url"  : "jdbc:mysql://mysqlcicd:3306/achatdb?allowPublicKeyRetrieval=true&useSSL=false",
+        "spring.datasource.url"  : "jdbc:mysql://mysqldb:3306/achatdb?useSSL=false",
         "spring.datasource.username" : "root",
-        "spring.datasource.password" : "root",
+        "spring.datasource.password" : "",
         "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL5InnoDBDialect",
         "spring.jpa.hibernate.ddl-auto" : "update"
       }'
+    volumes:
+      - .m2:/root/.m2
