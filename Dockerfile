@@ -1,4 +1,9 @@
 FROM openjdk:8
-ADD target/achat-1.0.jar achatiheb.jar
 EXPOSE 8089
-ENTRYPOINT ["java", "-jar", "achatiheb.jar"]
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+ONBUILD ADD . /usr/src/app
+ONBUILD RUN mvn install
+ONBUILD ADD /usr/src/app/target/achat-1.0.jar app.jar
+
+CMD ["java","-jar","/app.jar"]
