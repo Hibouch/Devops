@@ -15,7 +15,7 @@ services:
   app:
     depends_on:
       - mysqldb
-    image: hibadevops/achatss:1.0.0
+    image: hibadevops/achatsprojet:1.0.0
     container_name: projetachat
     restart: on-failure
     ports:
