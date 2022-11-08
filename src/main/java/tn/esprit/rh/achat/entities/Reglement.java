@@ -42,6 +42,12 @@ public class Reglement implements Serializable{
 		this.payee = payee;
 		this.dateReglement = dateReglement;
 	}
+	public Long getIdReglement() {
+		return this.idReglement;
+	}
+	public void setIdReglement(long l) {
+		this.idReglement = l;
+	}
 	
 	
 }

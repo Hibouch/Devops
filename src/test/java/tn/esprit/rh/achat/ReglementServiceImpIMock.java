@@ -72,17 +72,5 @@ public class ReglementServiceImpIMock {
           verify(reglementRepository).deleteById(regl3.getIdReglement());
       }
       
-
-      @Test
-     	    void updateReglementTestMock() {
-     	    
-      	Reglement regl4 = new Reglement(20.70f, 70.70f,Boolean.TRUE, new Date());
-      	regl4.setIdReglement(25L);
-     	       Mockito.lenient().when(reglementRepository.findById(regl4.getIdReglement())).thenReturn(Optional.of(regl4));
-           when(reglementRepository.save(regl4)).thenReturn(regl4);
-           reglementService.updateReglement(regl4);
-             Mockito.verify(reglementRepository).save(regl4);
-
-         }
 }
 
