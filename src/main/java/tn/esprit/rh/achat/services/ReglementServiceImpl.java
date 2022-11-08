@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import tn.esprit.rh.achat.entities.Reglement;
 import tn.esprit.rh.achat.repositories.FactureRepository;
 import tn.esprit.rh.achat.repositories.ReglementRepository;
-
 import java.util.Date;
 import java.util.List;
 
@@ -49,4 +48,14 @@ public class ReglementServiceImpl implements IReglementService {
 		return reglementRepository.getChiffreAffaireEntreDeuxDate( startDate, endDate);
 	}
 
+	@Override
+	public void deleteReglement(Long reglementId) {
+		reglementRepository.deleteById(reglementId);
+		 
+	}
+
+	@Override
+	public Reglement updateReglement(Reglement r) {
+		return reglementRepository.save(r);
+	}
 }

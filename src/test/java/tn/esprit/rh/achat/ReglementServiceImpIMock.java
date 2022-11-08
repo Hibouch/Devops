@@ -17,6 +17,8 @@ import tn.esprit.rh.achat.repositories.ReglementRepository;
 
 import tn.esprit.rh.achat.services.ReglementServiceImpl;
 
+import static org.mockito.Mockito.verify;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -57,5 +59,30 @@ public class ReglementServiceImpIMock {
         Assertions.assertSame(created,regl2);
         Mockito.verify(reglementRepository).save(regl2);
     }
+    
+    @Test
+    void deleteReglementTestMock() {
+
+      	Reglement regl3 = new Reglement(20.70f, 70.70f,Boolean.TRUE, new Date());
+      	Mockito.lenient().when(reglementRepository.findById(regl3.getIdReglement())).thenReturn(Optional.of(regl3));
+
+          reglementService.deleteReglement(regl3.getIdReglement());
+         
+
+          verify(reglementRepository).deleteById(regl3.getIdReglement());
+      }
+      
+
+      @Test
+     	    void updateReglementTestMock() {
+     	    
+      	Reglement regl4 = new Reglement(20.70f, 70.70f,Boolean.TRUE, new Date());
+      	regl4.setIdReglement(25L);
+     	       Mockito.lenient().when(reglementRepository.findById(regl4.getIdReglement())).thenReturn(Optional.of(regl4));
+           when(reglementRepository.save(regl4)).thenReturn(regl4);
+           reglementService.updateReglement(regl4);
+             Mockito.verify(reglementRepository).save(regl4);
+
+         }
 }
 
