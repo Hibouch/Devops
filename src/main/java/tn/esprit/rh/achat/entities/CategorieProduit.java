@@ -27,7 +27,7 @@ public class CategorieProduit implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idCategorieProduit;
-	int aqaaaaaaaa;
+	int aqaaaaaaaaa;
 	int aaa;
 	private String codeCategorie;
 	private String libelleCategorie;
