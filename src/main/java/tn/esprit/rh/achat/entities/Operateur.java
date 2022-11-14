@@ -29,7 +29,7 @@ public class Operateur implements Serializable{
 	private Long idOperateur;
 	private String nom;
 	private String prenom;
-	int s          ;
+	int s           ;
 	
 	private String password;
 	@OneToMany
