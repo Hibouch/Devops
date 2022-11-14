@@ -4,9 +4,9 @@ services:
     image: mysql:5.7
     restart: unless-stopped
     environment:
-      MYSQL_DATABASE: achatt
-      MYSQL_USER: iheb
-      MYSQL_PASSWORD: ihebm
+      MYSQL_DATABASE: achatdb
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 
     ports:
       - 3306:3306
 
@@ -17,3 +17,10 @@ services:
       - 8089:8089
     depends_on:
       - mysqldb
+    environment:
+      SPRING_APPLICATION_JSON: '{
+        "spring.datasource.url"  : "jdbc:mysql://mysqldb:3306/achatdb?allowPublicKeyRetrieval=true&useSSL=false",
+        "spring.datasource.username" : "root",
+        "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL5InnoDBDialect",
+        "spring.jpa.hibernate.ddl-auto" : "update"
+      }'  
