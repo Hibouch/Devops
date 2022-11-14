@@ -70,8 +70,8 @@
 	</dependencies>
 	<distributionManagement>
 		<repository>
-			<id>deploymentRepo</id>
-			<url>http://192.168.56.5:8081/repository/maven-releases/</url>
+			<id>nexus-repo</id>
+			<url>http://localhost:8081/repository/mavenreleases/</url>
 		</repository>
 	</distributionManagement>
 	<build>
