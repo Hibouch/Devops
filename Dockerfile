@@ -1,4 +1,4 @@
 FROM openjdk:8
-ADD target/tpAchatProject-1.0.jar achatimen.jar
 EXPOSE 8089
-ENTRYPOINT ["java", "-jar", "achatimen.jar"] 
+ADD http://192.168.1.114:8081/repository/maven-releases/com/esprit/examen/tpAchatProject/1.0/tpAchatProject-1.0.jar tpAchatProject-1.0.jar
+ENTRYPOINT ["java", "-jar", "/tpAchatProject-1.0.jar"]
