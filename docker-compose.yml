@@ -7,7 +7,7 @@ services:
       MYSQL_DATABASE: tpachato
       MYSQL_USER: imen
       MYSQL_PASSWORD: imen
-    ports:
+    ports: 
       - 3306:3306
 
   app: 
