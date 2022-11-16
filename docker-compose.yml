@@ -5,8 +5,8 @@ services:
     restart: unless-stopped
     environment:
       MYSQL_DATABASE: tpachato
-      MYSQL_USER: maram
-      MYSQL_PASSWORD: maram
+      MYSQL_USER: imen
+      MYSQL_PASSWORD: imen
     ports:
       - 3306:3306
 
