@@ -28,3 +28,4 @@ public interface ProduitRepository extends JpaRepository<Produit, Long> {
 			@Param("endDate") Date endDate);*/
 }
  
+ 
