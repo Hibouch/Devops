@@ -44,7 +44,7 @@ if [ -z "$MAVEN_SKIP_RC" ] ; then
     . "$HOME/.mavenrc"
   fi
 
-fi
+fi 
 
 # OS specific support.  $var _must_ be set to either true or false.
 cygwin=false;
