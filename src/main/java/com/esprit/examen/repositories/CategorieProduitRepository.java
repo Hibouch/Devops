@@ -8,3 +8,4 @@ import com.esprit.examen.entities.CategorieProduit;
 public interface CategorieProduitRepository extends JpaRepository<CategorieProduit, Long>{
 
 }
+  
