@@ -37,7 +37,7 @@ public class Produit implements Serializable {
 	@Temporal(TemporalType.DATE)
 	private Date dateCreation;
 	@Temporal(TemporalType.DATE)
-	private Date dateDerniereModification;
+	private Date dateDerniereModification; 
 	@ManyToOne
 	@JsonIgnore
 	private Stock stock;
